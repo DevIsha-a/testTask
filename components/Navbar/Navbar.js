@@ -5,7 +5,7 @@ function Navbar() {
   const [navbar, setNavbar] = useState(false);
   return (
     <section>
-      <nav className=" justify-between md:items-center p-5 w-5/6 m-auto justify-between">
+      <nav className=" justify-between md:items-center pl-[11%] pr-[7%] w-[93%] m-auto justify-between">
         <div className="md:flex space-x-14 md:items-center ">
           <div className=" md:py-5  ">
             <Image
@@ -17,12 +17,13 @@ function Navbar() {
             />{" "}
           </div>
           <div
-            className={`flex-1 justify-self-center pb-3  md:block md:pb-0 md:mt-0 ${
+            className={`flex-1   justify-self-center pb-3  md:block md:pb-0 md:mt-0  ${
               navbar ? "p-12 md:p-0 block" : "hidden"
             }`}
           >
-            <ul className="md:flex   md\:items-center  space-x-5 lg:ml-16 ">
-              <li className="lg:pl-20 text-left hover:text-purple-900 pb-6 text-xl   text-center     border-purple-900 ">
+             {/* lg:ml-16  */}
+            <ul className="md:flex  lg:ml-[25%]  md:items-center  space-x-5">
+              <li className="  text-left hover:text-purple-900 pb-6 text-xl   text-center     border-purple-900 ">
                 <Link href="#home" onClick={() => setNavbar(!navbar)}>
                   Home
                 </Link>
@@ -45,14 +46,14 @@ function Navbar() {
             </ul>
           </div>
 
-          <div className="rounded-xl invisible lg:visible bg-gradient-24 from-[#DC2B7A]   via-[#525BD2]  to-[#FDD978] font-bold p-0.5 h-9 ">
+          <div className="pb-6  rounded-xl invisible lg:visible bg-gradient-24 from-[#DC2B7A]   via-[#525BD2]  to-[#FDD978] font-bold  p-0.5 h-9 ">
             <div className="bg-white w-100 px-7 rounded-xl">
               <button className="bg-white py-1  text-transparent  bg-clip-text bg-gradient-1  from-[#DC2B7A]  via-[#525BD2]  to-[#FDD978]">
                 SignUp
               </button>
             </div>
           </div>
-          <div className="md:hidden absolute top-10 right-10">
+          <div className="md:hidden absolute top-10 right-10 ">
             <button onClick={() => setNavbar(!navbar)}>
               {!navbar ? (
                 <Image src="/menu.png" width={30} height={30} alt="logo" />
